@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercado Livre Redirect</title>
+  <style>
+    body { font-family: Arial; padding: 40px; }
+    .code-box { padding: 20px; background: #f3f3f3; border-radius: 8px; font-size: 20px; }
+  </style>
+</head>
+<body>
+  <h2>Seu código Mercado Livre:</h2>
+  <div class="code-box" id="code">Carregando...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    document.getElementById("code").textContent = code ?? "Nenhum code encontrado!";
+  </script>
+</body>
+</html>
